@@ -127,7 +127,7 @@ const ProfileModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
           <div className="pt-20 pb-12 px-8 bg-gradient-to-b from-blue-50 to-[#F8F9FA] relative">
             <h1 className="text-3xl font-extrabold text-[#334155] leading-snug mb-4">
               <span className="text-[#0033FF]">병원현장의 경험</span>을 바탕으로<br/> 
-              최고의 CRM컨설턴트를 꿈꿉니다.
+              최고의 CRM 전문가를 꿈꿉니다.
             </h1>
             <div className="flex items-center gap-4 mt-6">
               <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl border-4 border-white shadow-md">
@@ -135,7 +135,7 @@ const ProfileModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-800">신선룡</h2>
-                <p className="text-blue-600 font-medium">CRM Consultant Appliant</p>
+                <p className="text-blue-600 font-medium">CRM Applicant</p>
               </div>
             </div>
           </div>
@@ -339,10 +339,14 @@ const ProfileModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
           )}
 
           <div className="p-4 sm:p-5 flex gap-3">
-            <button className="flex-1 py-3.5 bg-slate-100 text-slate-700 font-bold rounded-xl active:scale-95 transition-transform flex items-center justify-center gap-2 hover:bg-slate-200">
+            <a
+              href="/신선룡_이력서.pdf"
+              download="신선룡_이력서.pdf"
+              className="flex-1 py-3.5 bg-slate-100 text-slate-700 font-bold rounded-xl active:scale-95 transition-transform flex items-center justify-center gap-2 hover:bg-slate-200"
+            >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               이력서
-            </button>
+            </a>
             <button 
               onClick={() => setShowContact(!showContact)}
               className="flex-[2] py-3.5 bg-[#0033FF] text-white font-bold rounded-xl active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:-translate-y-0.5"

@@ -42,7 +42,7 @@ function App() {
             <p className="text-slate-400 text-lg md:text-xl leading-relaxed">
               배우는 태도와 성장에 대한 열정을 바탕으로,<br />
               병원의 흐름을 데이터로 이해하고 더 나은 변화를 만들어가는<br />
-              <span className="text-white font-bold">CRM 컨설턴트로 성장하겠습니다.</span>
+              <span className="text-white font-bold">CRM 전문가로 성장하겠습니다.</span>
             </p>
           </div>
           <div className="flex flex-col gap-4">
