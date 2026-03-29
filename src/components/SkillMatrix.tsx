@@ -1,6 +1,13 @@
-import React from 'react';
 
-const SkillCategory = ({ title, skills, level, description }: { title: string, skills: string[], level: string, description: string }) => {
+
+type SkillCategoryProps = {
+  title: string;
+  skills: string[];
+  level: string;
+  description: string;
+};
+
+const SkillCategory = ({ title, skills, level, description }: SkillCategoryProps) => {
   return (
     <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100 transition-all hover:bg-white hover:shadow-xl group flex flex-col h-full">
       <div className="flex justify-between items-start mb-6">
@@ -10,7 +17,7 @@ const SkillCategory = ({ title, skills, level, description }: { title: string, s
         </span>
       </div>
       <div className="flex flex-wrap gap-2 mb-6">
-        {skills.map((skill, i) => (
+       {skills.map((skill: string, i: number) => (
           <span key={i} className="px-3 py-1.5 bg-white rounded-lg border border-slate-100 text-slate-600 text-sm font-medium group-hover:border-[#0033FF] transition-colors duration-300">
             {skill}
           </span>

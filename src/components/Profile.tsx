@@ -1,6 +1,11 @@
-import React from 'react';
-
-const ProfileCard = ({ title, items, icon, delay }) => {
+import type { ReactNode } from 'react';
+type ProfileCardProps = {
+  title: string;
+  items: string[];
+  icon: ReactNode;
+  delay: string;
+};
+const ProfileCard = ({ title, items, icon, delay }: ProfileCardProps) => {
   return (
     <div className={`bg-white p-10 rounded-[2rem] border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 group animate-scale-up ${delay}`}>
       <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0033FF] transition-colors duration-500">
@@ -12,7 +17,7 @@ const ProfileCard = ({ title, items, icon, delay }) => {
         {title}
       </h4>
       <ul className="space-y-4">
-        {items.map((item, i) => (
+      {items.map((item: string, i: number) => (
           <li key={i} className="flex items-center text-slate-600 font-medium">
             <span className="w-1.5 h-1.5 bg-[#0033FF] rounded-full mr-3 opacity-40 group-hover:opacity-100 transition-opacity" />
             {item}
